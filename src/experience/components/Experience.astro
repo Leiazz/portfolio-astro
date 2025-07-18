@@ -1,0 +1,8 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+import { experience } from '../constants/experience.astro';
+---
+
+<ol class='relative border-s border-gray-200 dark:border-gray-700'>
+  {experience.map((experience) => <ExperienceItem experience={experience} />)}
+</ol>
