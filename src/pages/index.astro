@@ -1,16 +1,18 @@
 ---
 import Badge from '../components/Badge.astro';
 import Experience from '../experience/components/Experience.astro';
+import BriefcaseIcon from '../icons/BriefcaseIcon.astro';
 import GithubIcon from '../icons/GithubIcon.astro';
 import LinkedInIcon from '../icons/LinkedInIcon.astro';
 import MailIcon from '../icons/MailIcon.astro';
 import SocialPill from '../icons/SocialPill.astro';
 import Layout from '../layouts/Layout.astro';
+import SectionLayout from '../layouts/SectionLayout.astro';
 ---
 
 <Layout>
   <main>
-    <section class='w-full lg:max-w-3xl mx-auto py-44'>
+    <SectionLayout class='py-44 pb-24'>
       <div class='flex items-center gap-5 mb-10'>
         <h1 class='text-5xl font-bold flex-1/3'>Hola! soy Gonzalo Donaire</h1>
         <a target='_blank' href='https://www.linkedin.com/in/gonzalo-donaire-ba8574181/'><Badge>Disponible para trabajar</Badge></a>
@@ -31,9 +33,13 @@ import Layout from '../layouts/Layout.astro';
           Gonzalodonaire001@gmail.com
         </SocialPill>
       </nav>
-    </section>
-    <section>
+    </SectionLayout>
+    <SectionLayout>
+      <h2 class='text-3xl font-semibold mb-4 flex gap-x-2 items-center'>
+        <BriefcaseIcon class='size-6' />
+        Experiencia laboral
+      </h2>
       <Experience />
-    </section>
+    </SectionLayout>
   </main>
 </Layout>
