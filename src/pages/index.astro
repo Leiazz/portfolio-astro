@@ -1,16 +1,35 @@
 ---
 import Badge from '../components/Badge.astro';
+import GithubIcon from '../icons/GithubIcon.astro';
+import LinkedInIcon from '../icons/LinkedInIcon.astro';
+import MailIcon from '../icons/MailIcon.astro';
+import SocialPill from '../icons/SocialPill.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
   <main>
-    <section class='w-full lg:max-w-3xl mx-auto py-10'>
+    <section class='w-full lg:max-w-3xl mx-auto py-44'>
       <div class='flex items-center gap-5 mb-10'>
         <h1 class='text-5xl font-bold flex-1/3'>Hola! soy Gonzalo Donaire</h1>
         <a target='_blank' href='https://www.linkedin.com/in/gonzalo-donaire-ba8574181/'><Badge>Disponible para trabajar</Badge></a>
       </div>
       <h2 class='text-xl opacity-80'>Desarrollador fullstack con más de 6 años de experiencia desarrollando soluciones con un impacto real al usuario final.</h2>
+
+      <nav class='flex gap-x-2 mt-4'>
+        <SocialPill href='https://www.linkedin.com/in/gonzalo-donaire-ba8574181/'>
+          <LinkedInIcon class='w-6 h-6' />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href='https://github.com/Leiazz'>
+          <GithubIcon class='w-6 h-6' />
+          GitHub
+        </SocialPill>
+        <SocialPill href='https://github.com/Leiazz'>
+          <MailIcon class='w-6 h-6' />
+          Gonzalodonaire001@gmail.com
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
