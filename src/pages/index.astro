@@ -1,5 +1,6 @@
 ---
 import Badge from '../components/Badge.astro';
+import Header from '../components/Header.astro';
 import Experience from '../experience/components/Experience.astro';
 import BriefcaseIcon from '../icons/BriefcaseIcon.astro';
 import GithubIcon from '../icons/GithubIcon.astro';
@@ -11,15 +12,16 @@ import SectionLayout from '../layouts/SectionLayout.astro';
 ---
 
 <Layout>
-  <main>
-    <SectionLayout class='py-44 pb-24'>
-      <div class='flex items-center gap-5 mb-10'>
-        <h1 class='text-5xl font-bold flex-1/3'>Gonzalo Donaire (Leiazz)</h1>
-        <a target='_blank' href='https://www.linkedin.com/in/gonzalo-donaire-ba8574181/'><Badge>Disponible para trabajar</Badge></a>
+  <main class='min-h-screen w-full flex flex-col px-4 sm:px-6 lg:px-8'>
+    <Header />
+    <SectionLayout class='py-12 lg:py-44 lg:pb-24'>
+      <div class='flex flex-col sm:flex-row sm:items-center gap-5 mb-10'>
+        <h1 class='text-3xl sm:text-4xl lg:text-5xl font-bold flex-1'>Gonzalo Donaire (Leiazz)</h1>
+        <a target='_blank' href='https://www.linkedin.com/in/gonzalo-donaire-ba8574181/' class='self-start sm:self-auto'><Badge>Disponible para trabajar</Badge></a>
       </div>
-      <h2 class='text-xl opacity-80'>Desarrollador fullstack con más de 6 años de experiencia desarrollando soluciones con un impacto real al usuario final.</h2>
+      <h2 class='text-lg sm:text-xl opacity-80'>Desarrollador fullstack con más de 6 años de experiencia desarrollando soluciones con un impacto real al usuario final.</h2>
 
-      <nav class='flex gap-x-2 mt-4'>
+      <nav class='flex flex-col sm:flex-row gap-2 mt-4'>
         <SocialPill href='https://www.linkedin.com/in/gonzalo-donaire-ba8574181/'>
           <LinkedInIcon class='size-6' />
           LinkedIn
@@ -35,7 +37,7 @@ import SectionLayout from '../layouts/SectionLayout.astro';
       </nav>
     </SectionLayout>
     <SectionLayout id='experience'>
-      <h2 class='text-3xl font-semibold mb-4 flex gap-x-2 items-center'>
+      <h2 class='text-2xl sm:text-3xl font-semibold mb-4 flex gap-x-2 items-center'>
         <BriefcaseIcon class='size-6' />
         Experiencia laboral
       </h2>
